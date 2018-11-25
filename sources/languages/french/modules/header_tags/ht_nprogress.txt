@@ -1,0 +1,3 @@
+module_header_tags_nprogress_title = Souhaitez-vous afficher une barre de téléchargement de la page du site ?
+module_header_tags_nprogress_description = Affiche une barre de téléchargement du site
+
