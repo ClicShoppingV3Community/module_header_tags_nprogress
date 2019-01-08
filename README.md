@@ -21,7 +21,7 @@ Implementation:
 - Activate the module
 
 
- All informations about the CliCshopping
+ All informations about the ClicShopping
 
  Community : https://www.clicshopping.org
 
