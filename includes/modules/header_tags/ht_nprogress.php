@@ -38,11 +38,10 @@
     }
 
     public function execute() {
-
       $CLICSHOPPING_Template = Registry::get('Template');
 
       $footer = '<!-- Nprogress Start -->' . "\n";
-      $footer .= '<script src="' . CLICSHOPPING::link($CLICSHOPPING_Template->getTemplateThemaJavaScript('nprogress/nprogress.min.js')) . '"></script>' . "\n";
+      $footer .= '<script src="' . CLICSHOPPING::link('sources/javascript/nprogress/nprogress.min.js', null, false) . '"></script>' . "\n";
       $footer .= '<script>';
       $footer .= 'NProgress.start(); ';
       $footer .= 'setTimeout(function() { NProgress.done(); $(\'.fade\').removeClass(\'out\'); }, 1000);';
@@ -51,7 +50,7 @@
 
       $CLICSHOPPING_Template->addBlock($footer, 'footer_scripts');
 
-      $nprogress = ' <link rel="stylesheet" href="' . $CLICSHOPPING_Template->getTemplateThemaJavaScript('nprogress/nprogress.min.css') .'">';
+      $nprogress = '<link rel="stylesheet" href="' . CLICSHOPPING::link('sources/javascript/nprogress/nprogress.min.css', null, false) .'">';
 
       $CLICSHOPPING_Template->addBlock($nprogress, $this->group );
     }
