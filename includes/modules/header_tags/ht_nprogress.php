@@ -15,8 +15,8 @@
 
   class ht_nprogress
   {
-    public $code;
-    public $group;
+    public string $code;
+    public string $group;
     public string $title;
     public string $description;
     public ?int $sort_order = 0;
@@ -32,7 +32,7 @@
       $this->title = CLICSHOPPING::getDef('module_header_tags_nprogress_title');
       $this->description = CLICSHOPPING::getDef('module_header_tags_nprogress_description');
 
-      if (defined('MODULE_HEADER_NPROGRESS_STATUS')) {
+      if (\defined('MODULE_HEADER_NPROGRESS_STATUS')) {
         $this->sort_order = MODULE_HEADER_NPROGRESS_SORT_ORDER;
         $this->enabled = (MODULE_HEADER_NPROGRESS_STATUS == 'True');
         $this->pages = MODULE_HEADER_NPROGRESS_DISPLAY_PAGES;
@@ -65,7 +65,7 @@
 
     public function check()
     {
-      return defined('MODULE_HEADER_NPROGRESS_STATUS');
+      return \defined('MODULE_HEADER_NPROGRESS_STATUS');
     }
 
     public function install()
